@@ -35,7 +35,7 @@ def cityreader(cities=[]):
     with open('src/cityreader/cities.csv', newline='') as cities_file:
         reader = csv.DictReader(cities_file)
         for row in reader:
-            new_city = City(row['city'], row['lat'], row['lng'])
+            new_city = City(row['city'], float(row['lat']), float(row['lng']))
             cities.append(new_city)
 
     return cities
