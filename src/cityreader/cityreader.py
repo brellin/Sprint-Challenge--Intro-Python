@@ -99,5 +99,6 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
     return within
 
 
+print('\ncityreader_stretch:')
 for city in cityreader_stretch(32, -120, 45, -100, cities):
-    print(city)
+    print(f'\t{city}')
